@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200;300;400;500;600&display=swap");
+:root {
+  --red: #d72e2e;
+  --black: rgba(2, 2, 2, 0.6);
+  --light-color: #666;
+  --box-shadow: 0.5rem 1.5rem rgba(173, 30, 30, 0.1);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+section:nth-child(even) {
+  background: rgb(255, 255, 255);
+}
+
+.home .home-slider .slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 9rem;
+}
+
+.home .home-slider .slide .content {
+  flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image {
+  flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image img {
+  width: 100%;
+}
+
+.home .home-slider .slide .content span {
+  font-size: 3rem;
+  color: var(--red);
+}
+
+.home .home-slider .slide .content h3 {
+  font-size: 7rem;
+  color: var(--black);
+}
+
+.home .home-slider .slide .content p {
+  font-size: 3rem;
+  color: var(--light-color);
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem 3%;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo > :nth-child(1) {
+  width: 12rem;
+  height: 9rem;
+}
+.logo > :nth-child(2) {
+  font-size: 2.8rem;
+  color: var(--red);
+  font-family: "Lobster", cursive;
+  margin-left: -1.7rem;
+}
+.navbar {
+  margin-left: 2rem;
+}
+.navbar a {
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.9rem;
+  color: var(--light-color);
+  margin: 1.3rem;
+}
+.navbar a.active,
+.navbar a:hover {
+  color: rgb(255, 255, 255);
+  background-color: var(--red);
+}
+header .icons i {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--black);
+  border-radius: 50%;
+  background-color: white;
+}
+
+header .icons i:hover{
+  color: white;
+  background: var(--red);
+  transform: rotate(360deg);
+}
+header .icons #menu-bars {
+  display: none;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: white;
+  background-color: var(--black);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+  background-color: var(--red);
+  letter-spacing: 0.1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--red);
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--red);
+  padding-top: 1rem;
+}
+
+.heading {
+  text-align: center;
+  color: var(--light-color);
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.item .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+}
+
+.item .box-container .box {
+  padding: 2.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.item .box-container .box .fa-heart {
+  position: absolute;
+  top: 1.5rem;
+  background: white;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5.2rem;
+  font-size: 2rem;
+  color: var(--black);
+}
+.item .box-container .box .fa-heart:hover {
+  background: var(--red);
+  color: white;
+}
+
+.item .box-container .box .fa-heart {
+  left: -15rem;
+}
+
+.item .box-container .box:hover .fa-heart {
+  left: 1.5rem;
+}
+
+.item .box-container .box img {
+  height: 17rem;
+  margin-top: 1rem 0;
+}
+
+.item .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+.item .box-container .box .chick {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.item .box-container .box .chick i {
+  font-size: 1.9rem;
+  color: var(--red);
+}
+
+.item .box-container .box span {
+  color: var(--red);
+  font-weight: bolder;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.about .row .image {
+  flex: 1 1 45rem;
+}
+.about .row .image img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 45rem;
+}
+.about .row .content h3 {
+  color: var(--black);
+  font-size: 4rem;
+  padding: 0.5rem 0;
+}
+.about .row .content p {
+  color: var(--light-color);
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  line-height: 2;
+}
+.about .row .content .icons-container .icons {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1 1 17rem;
+  padding: 1.5rem 1rem;
+}
+.about .row .content .icons-container .icons i {
+  font-size: 2.5rem;
+  color: var(--red);
+}
+.about .row .content .icons-container .icons span {
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+
+
+
+.Contact{
+  background-color: white !important;
+}
+
+.Contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.Contact .row .image {
+  flex: 1 1 45rem;
+}
+.Contact .row .image img {
+  width: 100%;
+}
+.Contact .row .contents {
+  flex: 1 1 45rem;
+}
+.Contact .row .contents h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+.Contact .row .contents p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  line-height: 2;
+}
+.Contact .row .contents .icons-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+
+.Contact .row .contents .icons-container .icons {
+  background: white;
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1 1 17rem;
+  padding: 1.5rem 1rem;
+}
+.Contact .row .contents .icons-container .icons i {
+  font-size: 2.5rem;
+  color: var(--red);
+}
+.Contact .row .contents .icons-container .icons span {
+  font-size: 1.8rem;
+  color: var(--black);
+}
+.footer {
+ background-color: black !important;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .boxs h3 {
+  padding: 0.5rem 0;
+  font-size: 2.5rem;
+  color: whitesmoke;
+}
+.footer .box-container .boxs a {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: blanchedalmond;
+}
+.footer .box-container .boxs a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.footer .credit {
+  text-align: center;
+  border-top: 0.1rem solid rgb(254, 254, 254);
+  font-size: 2.3rem;
+  color: var(--light-color);
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.footer .credit span a {
+  color: var(--red);
+}
+
+.boxs i{
+  font-size: 1.5rem;
+}
+.boxes > :nth-child(1) {
+  padding: 0.5rem 2rem;
+  font-size: 2.5rem;
+  color: var(--red);
+  font-family: "Lobster", cursive;
+
+}
+.img-side{
+  height: auto;
+  width: 100%;
+}
+
+
+.loader-container
+{
+  position: fixed;
+  top:0; left:0;
+  height:100%; 
+  width:100%;
+  z-index: 10000;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader-container img{
+  width:45rem;
+}
+
+.loader-container.fade-out{
+  top:-110%;
+  opacity:0;
+}
+
+
+/*media queries starts for making responsive*/
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+  .home .home-slider{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header .icons #menu-bars {
+    display: inline-block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    background: rgb(255, 255, 255);
+    border-top: 0.1rem solid rgb(255, 120, 120);
+    border-bottom: 0.1rem solid rgb(255, 120, 120);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+  }
+  .home .home-slider .slide {
+    gap:0;
+  }
+  .home .home-slider .slide .content h3 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  .item .box-container .box img {
+    height: auto;
+    width: 100%;
+  }
+}
+
